@@ -1,0 +1,11 @@
+[package]
+name = "utils_rs"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = ["./utils_derive", "./playground"]
+default-members = ["./playground"]
+
+[dependencies]
+utils_derive = { path = "./utils_derive" }
