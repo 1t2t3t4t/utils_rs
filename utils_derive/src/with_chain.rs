@@ -15,7 +15,7 @@ pub fn expand_with_chain(input: DeriveInput) -> TokenStream {
                     self.#ident = val.into();
                 };
                 Some(quote! {
-                    pub fn #fn_name(mut self, val: impl Into<#ty>) -> Self {
+                    pub fn #fn_name(&mut self, val: impl Into<#ty>) -> &mut Self {
                         #assign_expand
                         self
                     }
